@@ -3,34 +3,43 @@ var app = express();
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 var posts = [
    {
       "code":"BAcyDyQwcXX",
-      "caption":"Lunch #hamont",
+      "heading":"Giant emerald weighing 360 kg found in Brazil",
+      "content":"A giant emerald measuring 1.3 metres (4.3 feet) and weighing a whopping 360 kilograms (794 pounds) was discovered in April in the mining region of Carnaiba in the north of Brazil. The precious stone was found 200 metres (656 feet) below the surface of the Carnaiba mine in the Pindobacu district, by the Bahia Mineral Cooperative. The emerald was sold to an individual who refused to give an interview for security purposes, and did not reveal how much he had paid. The owner’s lawyer, Marcio Jandir, said all the relevant documentation for the sale had been completed. He said the owner was authorised to travel with the stone throughout Brazilian territory as he intended to present it at museums and libraries. The emerald is the second of its kind found in the region, following another discovered in 2001 which weighed 20 kilograms (44 pounds) and was valued at 310 million U.S.-dollars. The emerald was transported to the United States illegally and became the subject of a legal dispute between Brazil and the United States until it was decided in 2015 it would remain in the United States. (Reuters)",
       "likes":56,
       "id":"1161022966406956503",
-      "display_src":"https://scontent.cdninstagram.com/hphotos-xfp1/t51.2885-15/e35/12362588_1688046211438811_1395882545_n.jpg"
+      "display_src":"http://images.newsinshorts.com.edgesuite.net/app_assets/images/2017/24may/inshorts_image_1495649370520_605.jpg?resize=400px:*'"
    },
    {
       "code":"BAcJeJrQca9",
-      "caption":"Snow! ⛄️🌨❄️ #lifewithsnickers",
+      "heading":"Trailer of Game of Thrones season 7 released",
+      "content":"The trailer of the seventh season of the HBO series Game of Thrones (GoT) has been released. Characters including Jon Snow, Daenerys Targaryen, Arya Stark, Tyrion Lannister, Cersei Lannister and her brother Jaime have featured in the trailer. The new season, which will consist of only seven episodes, will premiere on July 16.",
       "likes":59,
       "id":"1160844458347054781",
-      "display_src":"https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e35/12407344_1283694208323785_735653395_n.jpg"
+      "display_src":"http://images.newsinshorts.com.edgesuite.net/app_assets/images/2017/24may/inshorts_image_1495651918721_265.jpg?resize=400px:*'"
    },
    {
       "code":"BAF_KY4wcRY",
-      "caption":"Cleaned my office and mounted my recording gear overhead. Stoked for 2016!",
+      "heading":"Man United beat Ajax to clinch maiden Europa League title",
+      "content":"Jose Mourinho’s first season at Manchester United will be deemed by many as a failure unless they win Wednesday’s Europa League final against Ajax Amsterdam to secure Champions League qualification.The Portuguese coach arrived at Old Trafford at the start of this campaign charged with the task of restoring United to, if not their old dominance, at least a place at the top table in the Premier League elite.But a sixth-place finish is lower than Mourinho’s predecessor Louis van Gaal managed in his two seasons, which concluded with fourth and fifth places.It is not the prestige of the Europa League title that would change the perspective on the former Chelsea and Real Madrid manager’s first year at United but the place that triumph would secure in the continent’s top club competition.For United, a second straight season outside the European elite would not only be a blow for the fans and the club’s status but could also affect their ability to recruit the very best talent from across the globe.For Mourinho, there is also his own ‘brand’ to consider.The 54-year-old left Chelsea last season after a shocking campaign of under-achievement, only for largely the same group of players to march to the Premier League title this term under his replacement Italian Antonio Conte.",
       "likes":79,
       "id":"1154606670337393752",
-      "display_src":"https://scontent.cdninstagram.com/hphotos-xpf1/t51.2885-15/e35/923995_1704188643150533_1383710275_n.jpg"
+      "display_src":"http://images.newsinshorts.com.edgesuite.net/app_assets/images/2017/24may/inshorts_image_1495657530265_714.jpg?resize=400px:*'"
    },
    {
       "code":"BAPIPRjQce9",
-      "caption":"Making baby pancakes for one early rising baby. ☕️🍴",
+      "heading":"Ashwin named best international cricketer of the year",
+      "content":"Off-spinner Ravichandran Ashwin will return to action after a two-month hiatus for the ICC Champions Trophy, starting in the United Kingdom on June 1. Ashwin believes India’s practice matches against New Zealand and Bangladesh will be an indicator to his form as he makes his India comeback.Ashwin missed the Indian Premier League (IPL) due to sports hernia, but is all set to pull his weight for India in their title defence of the Champions trophy. India kick off their campaign with the high-profile clash against arch-rivals Pakistan at Edgbaston on June 4.“I might be able to throw something new in this tournament. I am equipped enough to do so. The two practice games will give me an indication how well I go in the tournament,” Ashwin said at the CEAT Cricket Rating International Awards 2017.",
       "likes":47,
       "id":"1157179863266871229",
-      "display_src":"https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/e35/12407480_1654828594805097_152207166_n.jpg"
+      "display_src":"http://images.newsinshorts.com.edgesuite.net/app_assets/images/2017/24may/inshorts_image_1495636294134_419.jpg?resize=400px:*'"
    },
    {
       "code":"-hZh6IQcfN",
